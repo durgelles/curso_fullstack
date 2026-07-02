@@ -7,9 +7,11 @@ o sí mismo.
 #recorrer los numeros desde 2 hadta el 100
 for i in range(2,101):
     primo=True
-    for j in range(2,i):
-        if i % j ==0:
-            primo=False
+    j=2
+    while primo==True and j < i:
+        if i % j == 0:
+         primo=False
+        j+=1
+    
     if primo:
-        print(i)
-
+     print(i)            
