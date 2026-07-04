@@ -18,3 +18,42 @@ tengan más de 5 caracteres
 13. Usa el método clear() para vaciar la lista. 
 Recomendación: En cada paso comprueba que el código hace aquello que quieres 
 """""
+#1
+frutas=["manzana", "plátano", "cereza", "pera", "higo", "frambuesa" , "fresa"]
+#2
+print(len(frutas))
+#3
+print(frutas[2])
+#4
+frutas[1]="mora"
+print(frutas)
+#5
+frutas.append("mango")
+print(frutas)
+#6
+frutas.insert(0,"uva")
+print(frutas)
+#7
+for fruit in frutas:
+    print(fruit)
+print("---------------")
+#8
+ultima_fruta=frutas.pop()
+print(frutas)
+print(ultima_fruta)
+print("---------------")
+#9
+for i in range (len(frutas)):
+    print(frutas[i])
+
+print("---------------")
+
+#10
+for i in range (len(frutas)):
+    print(f"{frutas[i]} su longitud es {len(frutas[i])} ")
+print("---------------")
+#11
+for i in range (len(frutas)):
+    if len(frutas[i])>5:
+     print(frutas[i])
+#12
