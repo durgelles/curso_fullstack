@@ -3,14 +3,20 @@ Define una lista de 5 palabras aleatorias y una lista de letras prohibidas que c
 Filtra las palabras en tu lista original crea una nueva lista de palabras filtradas que solo contenga
 aquellas palabras que no tienen ninguna letra prohibida. """
 #crear listas
-lista_palabras_aleatorias=["mesa","ventana","cocina","cama","baño"]
+lista_palabras_aleatorias=["mesa","ventana","cocina","duermo","baño"]
 letras_prohibidas=["i","o","u"]
 palabras_filtradas=[]
 
-for i in letras_prohibidas:
-    for j in lista_palabras_aleatorias:
-        if i not in j and j not in palabras_filtradas :
-            palabras_filtradas.append(j)
 
+for palabras in lista_palabras_aleatorias:
+        incluir=True
+        for letra in letras_prohibidas:
+            if letra in palabras:
+                  incluir=False
+        
+        if incluir:
+            palabras_filtradas.append(palabras)
+                       
 
+ 
 print(palabras_filtradas)
