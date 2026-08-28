@@ -37,6 +37,15 @@ for i in range(len(unidades)):
         cantidad_total_ventas+=unidades[i]
 
 print(dinero_x_producto)
-print(cantidad_total_ventas)        
+print(cantidad_total_ventas)  
+
+print(f"el monto de dinero por producto es : ")
+for i in range(5):
+    print(f"{lista_productos[i]} , {unidades[i]} unidades: {dinero_x_producto[i]} $ EU     {lista_productos[i + 5]} , {unidades[i]} unidades : {dinero_x_producto[i + 5]} $ EU")
+
+print(f"la cantidad de productos vendidos es de {cantidad_total_ventas}")    
+
+print(f"el total de dinero recaudado en la venta de todos los productos es {sum(dinero_x_producto)}")
+
 
 
