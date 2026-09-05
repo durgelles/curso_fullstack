@@ -28,7 +28,7 @@ unidades = [3, 1, 0, 0, 7, 2, 0, 0, 4, 0]
 dinero_x_producto=[0,0,0,0,0,0,0,0,0,0]
 cantidad_total_ventas=0
 
-for i in range(5):
+"""for i in range(5):
     print(f"{lista_productos[i]}: {lista_precios[i]} EU     {lista_productos[i + 5]}: {lista_precios[i + 5]} EU")
 
 for i in range(len(unidades)):
@@ -45,7 +45,10 @@ for i in range(5):
 
 print(f"la cantidad de productos vendidos es de {cantidad_total_ventas}")    
 
-print(f"el total de dinero recaudado en la venta de todos los productos es {sum(dinero_x_producto)}")
+print(f"el total de dinero recaudado en la venta de todos los productos es {sum(dinero_x_producto)}")""" 
 
 
 
+for i in range(len(lista_precios)):
+    dinero_x_producto=lista_precios[i]*unidades[i]
+    print(f"el dinero facturado por el producto{i+1} es {dinero_x_producto}")

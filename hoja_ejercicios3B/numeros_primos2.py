@@ -15,6 +15,9 @@ for number in numeros:
 
     if primos:
         lista_primos.append(number)    
+        suma_primos = sum(lista_primos)
 
 
 print(lista_primos)
+print(f"la suma de  los numeros primos es {suma_primos}")
+print(f"la cantidad de numero primos es {len(lista_primos)}")
