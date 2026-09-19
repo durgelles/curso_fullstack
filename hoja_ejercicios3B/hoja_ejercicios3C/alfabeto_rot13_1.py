@@ -32,13 +32,23 @@ abecedario=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q",
 texto_rot=[]
 #pedir una frase al usuario
 texto_usuario=input("ingrese un texto :")
+#crear variable para guardar el texto en forma se string
+texto_rot_string=""
+#en caso de que la frase tenga espacio sea mas de una palabra
+for i in range(len(texto_usuario)):
+   if texto_usuario[i]==" ":
+      texto_rot.append(" ")
+   
 #recorrer cada letra de la frase o palabra
 for i in range(len(texto_usuario)):
-    for j in range(len(abecedario)):
+      for j in range(len(abecedario)):
         if texto_usuario[i]==abecedario[j]:
             if j+13<26:
              texto_rot.append(abecedario[j+13])
             else:
                texto_rot.append(abecedario[j+13-26])
 
-print(texto_rot)  
+
+texto_rot_string= "".join(texto_rot)
+
+print(texto_rot_string)
