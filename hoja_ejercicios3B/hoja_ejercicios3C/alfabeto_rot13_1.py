@@ -35,20 +35,27 @@ texto_usuario=input("ingrese un texto :")
 #crear variable para guardar el texto en forma se string
 texto_rot_string=""
 #en caso de que la frase tenga espacio sea mas de una palabra
-for i in range(len(texto_usuario)):
-   if texto_usuario[i]==" ":
-      texto_rot.append(" ")
+
    
 #recorrer cada letra de la frase o palabra
 for i in range(len(texto_usuario)):
-      for j in range(len(abecedario)):
-        if texto_usuario[i]==abecedario[j]:
-            if j+13<26:
-             texto_rot.append(abecedario[j+13])
-            else:
+       if texto_usuario[i]==" ": 
+            texto_rot.append(" ")
+       elif texto_usuario[i]==",":
+            texto_rot.append(",")
+       elif texto_usuario[i]=="¡" :
+             texto_rot.append("¡")
+                    
+       else:
+          for j in range(len(abecedario)):
+      
+             if texto_usuario[i]==abecedario[j]:
+              if j+13<26:
+               texto_rot.append(abecedario[j+13])
+              else:
                texto_rot.append(abecedario[j+13-26])
 
 
-texto_rot_string= "".join(texto_rot)
+texto_rot_string="".join(texto_rot)
 
 print(texto_rot_string)

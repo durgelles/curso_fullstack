@@ -15,7 +15,7 @@ alfabeto latino; los números, símbolos, espacios y otros caracteres se dejan i
          
           
          [n,o,p,q,r,s,t,u,v,w,x,y,z]		 	 [U, B, Y, N]
-
+ 
          
          
          
