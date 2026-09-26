@@ -28,34 +28,50 @@ esta codificación ROT13 de la otra.
 
 """
 #crear lista del abecedario
-abecedario=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
-texto_rot=[]
+abecedario_minuscula=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+abecedario_mayuscula=[]
+for char in abecedario_minuscula:
+    abecedario_mayuscula.append(char.upper())
+
 #pedir una frase al usuario
 texto_usuario=input("ingrese un texto :")
+segundo_texto_usario=input("ingrese el segundo texto : ")
 #crear variable para guardar el texto en forma se string
 texto_rot_string=""
-#en caso de que la frase tenga espacio sea mas de una palabra
+#recorrer la frase 
+for char in texto_usuario:
+    if char in abecedario_minuscula:
+        
+            for j in range(len(abecedario_minuscula)):
+                if char==abecedario_minuscula[j]:
+                    if j+13<26:
+                     texto_rot_string=texto_rot_string+abecedario_minuscula[j+13]
+                    else:
+                     texto_rot_string=texto_rot_string+abecedario_minuscula[j+13-26]
+    elif char in abecedario_mayuscula:
+       
+                   for j in range(len(abecedario_mayuscula)):
+                       if char==abecedario_mayuscula[j]:
+                           if j+13<26:
+                            texto_rot_string=texto_rot_string+abecedario_mayuscula[j+13]
+                           else:
+                            texto_rot_string=texto_rot_string+abecedario_mayuscula[j+13-26]
+    else:
+        texto_rot_string=texto_rot_string+char
 
-   
-#recorrer cada letra de la frase o palabra
-for i in range(len(texto_usuario)):
-       if texto_usuario[i]==" ": 
-            texto_rot.append(" ")
-       elif texto_usuario[i]==",":
-            texto_rot.append(",")
-       elif texto_usuario[i]=="¡" :
-             texto_rot.append("¡")
-                    
-       else:
-          for j in range(len(abecedario)):
-      
-             if texto_usuario[i]==abecedario[j]:
-              if j+13<26:
-               texto_rot.append(abecedario[j+13])
-              else:
-               texto_rot.append(abecedario[j+13-26])
-
-
-texto_rot_string="".join(texto_rot)
 
 print(texto_rot_string)
+
+
+
+
+
+
+
+
+
+
+                
+                
+
+           
