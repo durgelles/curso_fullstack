@@ -36,7 +36,8 @@ for temperatura in temperaturas:
     if dia==7:
         dia=0
 
-print(temperaturas_dias)        
+for i in range(len(dias_semana)):
+     print(f"el dia {dias_semana[i]} la suma de sus temperaturas es :{temperaturas_dias[i]} ")
 
 
 
