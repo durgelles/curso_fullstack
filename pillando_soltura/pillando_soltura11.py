@@ -7,4 +7,6 @@ lista_mayusculas=[]
 for palabra in compras_super:
     lista_mayusculas.append(palabra.upper())
 
-print(lista_mayusculas)
+for i in range(len(compras_super)):
+
+ print(f"la palabra {compras_super[i]} en mayuscula es {lista_mayusculas[i]}")

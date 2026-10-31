@@ -7,4 +7,5 @@ tamaño_string=[]
 for palabra in compras_super:
     tamaño_string.append(len(palabra))
 
-print(tamaño_string)
+for i in range(len(compras_super)):
+    print(f"la palabra {compras_super[i]} tiene un tamaño de {tamaño_string[i]}")
