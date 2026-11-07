@@ -12,6 +12,7 @@ for i in range(4):
 
 
 print(numeros)
+#igualar a mayor el primer valor para comenzar la comparacion:
 
 numero_mayor=numeros[0]
 

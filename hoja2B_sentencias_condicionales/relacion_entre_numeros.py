@@ -9,6 +9,7 @@ numeros=[]
 for i in range(3):
     numero=int(input(f"ingrese el numero {i+1} : "))
     numeros.append(numero)
+    
 
 print(numeros)
 
